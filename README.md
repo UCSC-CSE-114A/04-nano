@@ -164,7 +164,7 @@ let x = 3 in x + x
 is represented by
 
 ```haskell
-ELet (EVar "x") (EInt 3)
+ELet "x" (EInt 3)
   (EBin Plus (EVar "x") (EVar "x"))
 ```
 
@@ -358,9 +358,6 @@ When you are done, you should see the following behavior
 True
 
 >>> eval []  (EBin Eq (EInt 2) (EInt 3))
-False
-
->>> eval []  (EBin Eq (EInt 2) (EBool True))
 False
 
 >>> eval []  (EBin Lt (EInt 2) (EBool True))
