@@ -1,6 +1,6 @@
 # Assignment 4: Nano (270 points)
 
-## Due by Friday 5/18 23:59:59
+## Due by Monday 5/21 23:59:59
 
 
 ## Overview
@@ -609,10 +609,12 @@ These should be parsed to `ELet`, `ELam`, and `EIf`
 expressions, that is,
 
 - a **let** expression should have the form `let <id> = <expr> in <expr>`,
+  or the form `let <id> <ids> = <expr> in <expr>`,
 - a **function** expression should have the form `\ <id> -> <expr>` and
 - an **if** expression should be `if <expr> then <expr> else <expr>`.
 
 Here `<id>` denotes any identifier from part (a),
+`<ids>` denotes a sequence of one or many space-separated `<id>`s,
 and `<expr>` denotes any expression from part (a),
 or any let / fun / if expression.
 
@@ -630,7 +632,10 @@ Right [LET (AlexPn 0 1 1),ID (AlexPn 4 1 5) "foo",EQB (AlexPn 8 1 9),
 
 >>> parse "let foo = \\x -> if y then z else w in foo"
 ELet "foo" (ELam "x" (EIf (EVar "y") (EVar "z") (EVar "w"))) (EVar "foo")
-```
+
+>>> parse "let foo x = if y then z else w in foo"
+ELet "foo" (ELam "x" (EIf (EVar "y") (EVar "z") (EVar "w"))) (EVar "foo")
+````
 
 ### (c) 15 points
 
