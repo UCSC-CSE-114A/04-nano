@@ -219,6 +219,7 @@ data Value
   | VClos Env Id Expr
   | VNil
   | VPair Value Value
+  | VPrim (Value -> Value)
 ```
 
 where an `Env` is simply a dictionary: a list of pairs
@@ -363,6 +364,10 @@ False
 >>> eval []  (EBin Lt (EInt 2) (EBool True))
 *** Exception: Error {errMsg = "type error: binop"}
 ```
+
+Also note that, so long as you error message is appropriate, you will receive
+points. We will not be checking for an exact error message. However,
+it should contain the substring 'type error:'.
 
 Next, implement the evaluation of `EIf p t f` expressions.  
 
@@ -519,6 +524,7 @@ following behavior
 >>> execExpr (EApp "tail" el)
 (2 : [])
 ```
+The constructor `VPrim` will come in handy here.
 
 ## Problem 2: Nano Lexer (Lexer.x) and Parser (Parser.y)
 
@@ -649,7 +655,7 @@ Add the following tokens to the lexer and parser.
 | `<`     | `LESS`  |
 | `<=`    | `LEQ`   |
 | `==`    | `EQL`   |
-| `!=`    | `NEQ`   |
+| `/=`    | `NEQ`   |
 | `&&`    | `AND`   |
 | `||`    | `OR`    |
 
