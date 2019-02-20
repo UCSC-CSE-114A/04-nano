@@ -114,7 +114,7 @@ exitError (Error msg) = return (VErr msg)
 -- False
 --
 -- >>> eval []  (EBin Eq (EInt 2) (EBool True))
--- False
+-- *** Exception: Error {errMsg = "type error: binop"}
 --
 -- >>> eval []  (EBin Lt (EInt 2) (EBool True))
 -- *** Exception: Error {errMsg = "type error: binop"}
