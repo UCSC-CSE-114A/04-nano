@@ -1,6 +1,6 @@
 # Assignment 4: Nano (270 points)
 
-## Due by ~Monday 2/25~ Wednesday 2/27 1pm
+## Due by ~Monday 2/25~ Friday 3/1 1pm
 
 
 ## Overview
