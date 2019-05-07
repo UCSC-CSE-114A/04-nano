@@ -34,7 +34,6 @@ tags:
 turnin: 
 	# rm -rf .stack-work
 	rm -rf ./$(ASGN)-$(NAME).tgz
-	tar -zcvf ../$(ASGN)-$(NAME).tgz --exclude .stack-work --exclude .git ../$(ASGN)-$(NAME)
+	tar -zcvf ../$(ASGN)-$(NAME).tgz --exclude .stack-work --exclude .git .
 	mv ../$(ASGN)-$(NAME).tgz . 
-	turnin -c $(COURSE) -p $(ASGN) ./$(ASGN)-$(NAME).tgz  
 

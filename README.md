@@ -1,6 +1,6 @@
 # Assignment 4: Nano (270 points)
 
-## Due by ~Monday 2/25~ Friday 3/1 1pm
+## Due by Monday 5/13, 11:59 PM
 
 
 ## Overview
@@ -46,8 +46,6 @@ take a while to grok.
 
 ## Assignment Testing and Evaluation
 
-Your functions/programs **must** compile and run on `ieng6.ucsd.edu`.
-
 Most of the points, will be awarded automatically, by
 **evaluating your functions against a given test suite**.
 
@@ -85,17 +83,7 @@ but you will not be graded on this.
 
 ## Submission Instructions
 
-To submit your code, just do:
-
-```bash
-$ make turnin
-```
-
-`turnin` will provide you with a confirmation of the
-submission process; make sure that the size of the file
-indicated by `turnin` matches the size of your file.
-See the ACS Web page on [turnin](http://acs.ucsd.edu/info/turnin.php)
-for more information on the operation of the program.
+To submit your code, push your code to gitlab and turn in the commit ID on canvas.
 
 ## Data Structures and Overview
 
@@ -231,8 +219,6 @@ type Env = [(Id, Value)]
 
 Intuitively, the Nano integer value `4` and boolean value
 `True` are represented respectively as `VInt 4` and `VBool True`.
-The more interesting case is for closures that correspond to
-function values (see [lecture notes](https://nadia-polikarpova.github.io/cse130-sp18/lectures/05-closure.html)).
 
 - `VClos env "x" e` represents a function with argument `"x"`
    and body-expression `e` that was defined in an environment
