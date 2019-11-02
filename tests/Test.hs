@@ -24,6 +24,26 @@ unit sc = testGroup "NANO"
               , Nano.EInt 123
               , 1
               , "1a - \" 894\\n\\t\"")
+  , scoreTest ( uncurry Nano.lookupId
+              , ("z1", Nano.env0)
+              , (Nano.VInt 0)
+              , 1
+              , "lookup1")
+  , scoreTest ( uncurry Nano.lookupId
+              ,  ("x", Nano.env0)
+              , (Nano.VInt 1)
+              , 1
+              , "lookup2")
+  , scoreTest ( uncurry Nano.eval
+              , (Nano.env0, (Nano.EBin Nano.Minus (Nano.EBin Nano.Plus "x" "y") (Nano.EBin Nano.Plus "z" "z1")))
+              , (Nano.VInt 0)
+              , 1
+              , "eval EBin 1")
+  , scoreTest ( uncurry Nano.eval
+              , ([],(Nano.EBin Nano.Eq (Nano.EInt 2) (Nano.EInt 3)))
+              , (Nano.VBool False)
+              , 1
+              , "eval EBin 2")
   , scoreTest ( parse
               , "x"
               , Nano.EVar "x"
@@ -74,6 +94,16 @@ unit sc = testGroup "NANO"
               , Nano.EBin Nano.Cons (Nano.EVar "e") (Nano.EVar "f")
               , 1
               , "1e - e:f")
+  , scoreTest ( Nano.eval []
+              , Nano.ELet "ksum" (Nano.ELam "x" (Nano.EIf (Nano.EBin Nano.Eq (Nano.EVar "x") (Nano.EInt 0)) (Nano.EInt 0) (Nano.EBin Nano.Plus (Nano.EVar "x") (Nano.EApp (Nano.EVar "ksum") (Nano.EBin Nano.Minus (Nano.EVar "x") (Nano.EInt 1)))))) (Nano.EApp (Nano.EVar "ksum") (Nano.EInt 100))
+              , Nano.VInt 5050
+              , 1
+              , "1e - recursion - ksum") -- sum of first k positive integers
+  , scoreTest ( Nano.eval Nano.prelude
+              , Nano.ELet "len" (Nano.ELam "x" (Nano.EIf (Nano.EBin Nano.Eq (Nano.EVar "x") Nano.ENil) (Nano.EInt 0) (Nano.EBin Nano.Plus (Nano.EInt 1) (Nano.EApp (Nano.EVar "len") (Nano.EApp (Nano.EVar "tail") (Nano.EVar "x")))))) (Nano.EApp (Nano.EVar "len") (Nano.EBin Nano.Cons (Nano.EInt 5) (Nano.EBin Nano.Cons (Nano.EInt 5) (Nano.EBin Nano.Cons (Nano.EInt 5) (Nano.EBin Nano.Cons (Nano.EInt 5) Nano.ENil)))))
+              , Nano.VInt 4
+              , 2
+              , "1f - recursion + VPrim, list length") -- length of a list
   , scoreTest ( Nano.eval env1
               , Nano.EVar "c1"
               , Nano.VInt 1
@@ -106,7 +136,21 @@ unit sc = testGroup "NANO"
               , Nano.VInt 25
               , 2
               , "2d - (fun x->x*x) 5")
-
+  , scoreTest ( uncurry Nano.eval
+              , (Nano.prelude, (parse "let x = [1,2,3,4] in head (tail x)"))
+              , Nano.VInt 2
+              , 1
+              , "new1 - VPrim")
+  , scoreTest ( uncurry Nano.eval
+              , (Nano.prelude, (parse "let x = [1,2,3,4] in head [2,3]:tail x"))
+              , Nano.valueList [Nano.VInt 2, Nano.VInt 2, Nano.VInt 3, Nano.VInt 4]
+              , 1
+              , "new2 - VPrim")
+  , scoreTest ( uncurry Nano.eval
+              , (Nano.prelude, (parse "let sumList x s = if x == [] then s else sumList (tail x) (s + head x) in sumList [1,2,3,4] 0"))
+              , Nano.VInt 10
+              , 2
+              , "new3 - sumList tail recursion") -- sum of a list
   , fileTest  ( "tests/input/t1.hs"
               , Nano.VInt 45
               , 1 )
