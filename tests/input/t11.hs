@@ -1,7 +1,8 @@
 top =
-  let add n = if n == 0
-              then 0
-                else n + (add (n - 1))
-                
+  let addh c n = if 0 < n
+                 then addh (c + n) (n - 1) 
+                 else c
+  in
+  let add n = addh 0 n
   in
     add 10
