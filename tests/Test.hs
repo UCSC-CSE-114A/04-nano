@@ -14,17 +14,7 @@ parse = Nano.parse
 
 unit :: Score -> TestTree
 unit sc = testGroup "NANO"
-  [ scoreTest ( parse
-              , "True"
-              , Nano.EBool True
-              , 1
-              , "1a - \"true\"")
-  , scoreTest ( parse
-              , "123\n\t"
-              , Nano.EInt 123
-              , 1
-              , "1a - \" 894\\n\\t\"")
-  , scoreTest ( uncurry Nano.lookupId
+  [ scoreTest ( uncurry Nano.lookupId
               , ("z1", Nano.env0)
               , (Nano.VInt 0)
               , 1
@@ -44,56 +34,6 @@ unit sc = testGroup "NANO"
               , (Nano.VBool False)
               , 1
               , "eval EBin 2")
-  , scoreTest ( parse
-              , "x"
-              , Nano.EVar "x"
-              , 1
-              , "1a - \"Z\"")
-  , scoreTest ( parse
-              , "let x = 5 in x"
-              , Nano.ELet "x" (Nano.EInt 5) (Nano.EVar "x")
-              , 1
-              , "1b - let x = 5 in x")
-  , scoreTest ( parse
-              , "\\x -> 5"
-              , Nano.ELam "x" (Nano.EInt 5)
-              , 1
-              , "1b - fun x -> 5")
-  , scoreTest ( parse
-              , "if a then b else c"
-              , Nano.EIf (Nano.EVar "a") (Nano.EVar "b") (Nano.EVar "c")
-              , 1
-              , "1b - if a then b else c")
-  , scoreTest ( parse
-              , "x + 2"
-              ,  Nano.EBin Nano.Plus (Nano.EVar "x") (Nano.EInt 2)
-              , 1
-              , "1c - x+2")
-  , scoreTest ( parse
-              , "x <= 2"
-              , Nano.EBin Nano.Le (Nano.EVar "x") (Nano.EInt 2)
-              , 1
-              , "1c - x<=2")
-  , scoreTest ( parse
-              , "x && 2"
-              , Nano.EBin Nano.And (Nano.EVar "x") (Nano.EInt 2)
-              , 1
-              , "1c - x&&2")
-  , scoreTest ( parse
-              , "1 + ( 2 * ( 3 ))"
-              , Nano.EBin Nano.Plus (Nano.EInt 1) (Nano.EBin Nano.Mul (Nano.EInt 2) (Nano.EInt 3))
-              , 1
-              , "1d - 1+(2*(3))")
-  , scoreTest ( parse
-              , "f x"
-              , Nano.EApp (Nano.EVar "f") (Nano.EVar "x")
-              , 1
-              , "1d - f x")
-  , scoreTest ( parse
-              , "e : f"
-              , Nano.EBin Nano.Cons (Nano.EVar "e") (Nano.EVar "f")
-              , 1
-              , "1e - e:f")
   , scoreTest ( Nano.eval []
               , Nano.ELet "ksum" (Nano.ELam "x" (Nano.EIf (Nano.EBin Nano.Eq (Nano.EVar "x") (Nano.EInt 0)) (Nano.EInt 0) (Nano.EBin Nano.Plus (Nano.EVar "x") (Nano.EApp (Nano.EVar "ksum") (Nano.EBin Nano.Minus (Nano.EVar "x") (Nano.EInt 1)))))) (Nano.EApp (Nano.EVar "ksum") (Nano.EInt 100))
               , Nano.VInt 5050
