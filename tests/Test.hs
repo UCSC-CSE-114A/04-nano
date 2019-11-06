@@ -111,28 +111,28 @@ unit sc = testGroup "NANO"
               , "2a - c1")
   , scoreTest ( Nano.eval env1
               , Nano.EBin Nano.Mul
-                  ( Nano.EBin Nano.Minus (Nano.EInt 20) "c1" )
-                  ( Nano.EBin Nano.Plus  "c2" "c3")
+                  ( Nano.EBin Nano.Minus (Nano.EInt 20) (Nano.EVar "c1"))
+                  ( Nano.EBin Nano.Plus  (Nano.EVar "c2") (Nano.EVar "c3") )
               , Nano.VInt 95
               , 3
               , "2a - (20-c1)*(c2+c3)")
   , failTest  ( Nano.eval env2
-              , Nano.EBin Nano.Plus "bt" "c3"
+              , Nano.EBin Nano.Plus (Nano.EVar "bt") (Nano.EVar "c3")
               , "type error"
               , 1
               , "2b - True + 3")
   , failTest  ( Nano.eval env2
-              , Nano.EBin Nano.Or "bt" "c3"
+              , Nano.EBin Nano.Or (Nano.EVar "bt") (Nano.EVar "c3")
               , "type error"
               , 1
               , "2b - bt||c3")
   , scoreTest ( Nano.eval []
-              , Nano.ELet "x" (Nano.EInt 4) "x"
+              , Nano.ELet "x" (Nano.EInt 4) (Nano.EVar "x")
               , Nano.VInt 4
               , 1
               , "2c - let x = 4 in x")
   , scoreTest ( Nano.eval []
-              , Nano.EApp (Nano.ELam "x" (Nano.EBin Nano.Mul "x" "x")) (Nano.EInt 5)
+              , Nano.EApp (Nano.ELam "x" (Nano.EBin Nano.Mul (Nano.EVar "x") (Nano.EVar "x"))) (Nano.EInt 5)
               , Nano.VInt 25
               , 2
               , "2d - (fun x->x*x) 5")
