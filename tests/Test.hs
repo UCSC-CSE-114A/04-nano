@@ -34,63 +34,63 @@ unit sc = testGroup "NANO"
               , (Nano.VBool False)
               , 1
               , "eval EBin 2")
-  , scoreTest ( Nano.eval []
-              , Nano.ELet "ksum" (Nano.ELam "x" (Nano.EIf (Nano.EBin Nano.Eq (Nano.EVar "x") (Nano.EInt 0)) (Nano.EInt 0) (Nano.EBin Nano.Plus (Nano.EVar "x") (Nano.EApp (Nano.EVar "ksum") (Nano.EBin Nano.Minus (Nano.EVar "x") (Nano.EInt 1)))))) (Nano.EApp (Nano.EVar "ksum") (Nano.EInt 100))
-              , Nano.VInt 5050
-              , 1
-              , "1e - recursion - ksum") -- sum of first k positive integers
-  , scoreTest ( Nano.eval Nano.prelude
-              , Nano.ELet "len" (Nano.ELam "x" (Nano.EIf (Nano.EBin Nano.Eq (Nano.EVar "x") Nano.ENil) (Nano.EInt 0) (Nano.EBin Nano.Plus (Nano.EInt 1) (Nano.EApp (Nano.EVar "len") (Nano.EApp (Nano.EVar "tail") (Nano.EVar "x")))))) (Nano.EApp (Nano.EVar "len") (Nano.EBin Nano.Cons (Nano.EInt 5) (Nano.EBin Nano.Cons (Nano.EInt 5) (Nano.EBin Nano.Cons (Nano.EInt 5) (Nano.EBin Nano.Cons (Nano.EInt 5) Nano.ENil)))))
-              , Nano.VInt 4
-              , 2
-              , "1f - recursion + VPrim, list length") -- length of a list
   , scoreTest ( Nano.eval env1
               , Nano.EVar "c1"
               , Nano.VInt 1
               , 2
-              , "2a - c1")
+              , "1a - c1")
   , scoreTest ( Nano.eval env1
               , Nano.EBin Nano.Mul
                   ( Nano.EBin Nano.Minus (Nano.EInt 20) (Nano.EVar "c1"))
                   ( Nano.EBin Nano.Plus  (Nano.EVar "c2") (Nano.EVar "c3") )
               , Nano.VInt 95
               , 3
-              , "2a - (20-c1)*(c2+c3)")
+              , "1a - (20-c1)*(c2+c3)")
   , failTest  ( Nano.eval env2
               , Nano.EBin Nano.Plus (Nano.EVar "bt") (Nano.EVar "c3")
               , "type error"
               , 1
-              , "2b - True + 3")
+              , "1b - True + 3")
   , failTest  ( Nano.eval env2
               , Nano.EBin Nano.Or (Nano.EVar "bt") (Nano.EVar "c3")
               , "type error"
               , 1
-              , "2b - bt||c3")
+              , "1b - bt||c3")
   , scoreTest ( Nano.eval []
               , Nano.ELet "x" (Nano.EInt 4) (Nano.EVar "x")
               , Nano.VInt 4
               , 1
-              , "2c - let x = 4 in x")
+              , "1c - let x = 4 in x")
   , scoreTest ( Nano.eval []
               , Nano.EApp (Nano.ELam "x" (Nano.EBin Nano.Mul (Nano.EVar "x") (Nano.EVar "x"))) (Nano.EInt 5)
               , Nano.VInt 25
               , 2
-              , "2d - (fun x->x*x) 5")
+              , "1d - (fun x->x*x) 5")
+  , scoreTest ( Nano.eval []
+              , Nano.ELet "ksum" (Nano.ELam "x" (Nano.EIf (Nano.EBin Nano.Eq (Nano.EVar "x") (Nano.EInt 0)) (Nano.EInt 0) (Nano.EBin Nano.Plus (Nano.EVar "x") (Nano.EApp (Nano.EVar "ksum") (Nano.EBin Nano.Minus (Nano.EVar "x") (Nano.EInt 1)))))) (Nano.EApp (Nano.EVar "ksum") (Nano.EInt 100))
+              , Nano.VInt 5050
+              , 1
+              , "1e - eval recursion - ksum") -- sum of first k positive integers
+  , scoreTest ( Nano.eval Nano.prelude
+              , Nano.ELet "len" (Nano.ELam "x" (Nano.EIf (Nano.EBin Nano.Eq (Nano.EVar "x") Nano.ENil) (Nano.EInt 0) (Nano.EBin Nano.Plus (Nano.EInt 1) (Nano.EApp (Nano.EVar "len") (Nano.EApp (Nano.EVar "tail") (Nano.EVar "x")))))) (Nano.EApp (Nano.EVar "len") (Nano.EBin Nano.Cons (Nano.EInt 5) (Nano.EBin Nano.Cons (Nano.EInt 5) (Nano.EBin Nano.Cons (Nano.EInt 5) (Nano.EBin Nano.Cons (Nano.EInt 5) Nano.ENil)))))
+              , Nano.VInt 4
+              , 2
+              , "1f - recursion + VPrim, list length") -- length of a list
   , scoreTest ( uncurry Nano.eval
               , (Nano.prelude, (parse "let x = [1,2,3,4] in head (tail x)"))
               , Nano.VInt 2
               , 1
-              , "new1 - VPrim")
+              , "1f - VPrim 1")
   , scoreTest ( uncurry Nano.eval
               , (Nano.prelude, (parse "let x = [1,2,3,4] in head [2,3]:tail x"))
               , Nano.valueList [Nano.VInt 2, Nano.VInt 2, Nano.VInt 3, Nano.VInt 4]
               , 1
-              , "new2 - VPrim")
+              , "1f - VPrim 2")
   , scoreTest ( uncurry Nano.eval
               , (Nano.prelude, (parse "let sumList x s = if x == [] then s else sumList (tail x) (s + head x) in sumList [1,2,3,4] 0"))
               , Nano.VInt 10
               , 2
-              , "new3 - sumList tail recursion") -- sum of a list
+              , "1e/f - sumList tail recursion") -- sum of a list
   , fileTest  ( "tests/input/t1.hs"
               , Nano.VInt 45
               , 1 )
