@@ -1,4 +1,4 @@
-# Assignment 4: Nano (200 points)
+# Assignment 4: Nano (180 points)
 
 ## Due by Sunday 11/17, 11:59 PM
 
@@ -303,7 +303,7 @@ recompiled, you should get the following behavior:
 *** Exception: Error {errMsg = "unbound variable: p"}
 ```
 
-### (b) 20 points
+### (b) 25 points
 
 Next, add support for the binary operators
 
@@ -454,7 +454,7 @@ recompiled, you should get the following behavior:
 102
 ```
 
-### (e) 30 points
+### (e) 35 points
 
 Make the above work for recursively defined functions.
 Once you have implemented this functionality, you should
@@ -471,7 +471,7 @@ get the following behavior:
 ```
 
 
-### (f) 40 points
+### (f) 45 points
 
 Finally, extend your program to support operations on lists.
 
