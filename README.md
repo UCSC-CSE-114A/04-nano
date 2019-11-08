@@ -15,7 +15,7 @@ fully understand the notions of
 by implementing an interpreter for a subset of Haskell.
 
 No individual function requires more than 15-25
-lines, so if you're answer is longer, you can be sure
+lines, so if your answer is longer, you can be sure
 that you need to rethink your solution.
 
 The assignment is in the files:
