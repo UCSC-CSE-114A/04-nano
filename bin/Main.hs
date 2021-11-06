@@ -2,6 +2,7 @@ import           Control.Monad.Trans
 import           System.Console.Haskeline
 import qualified Language.Nano.Types  as Nano
 import qualified Language.Nano.Eval   as Nano
+import           Control.Exception
 
 main :: IO ()
 main = runInputT defaultSettings loop
