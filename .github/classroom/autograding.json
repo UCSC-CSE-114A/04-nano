@@ -62,7 +62,7 @@
     },
     {
       "name": "1b - True + 3",
-      "run": "stack test --allow-different-user --ta '--pattern \"1a - (20-c1)*(c2+c3)\"'",
+      "run": "stack test --allow-different-user --ta '--pattern \"1b - True + 3\"'",
       "setup": "",
       "input": "",
       "output": "",
@@ -72,7 +72,7 @@
     },
     {
       "name": "1b - bt || c3",
-      "run": "stack test --allow-different-user --ta '--pattern \"1a - (20-c1)*(c2+c3)\"'",
+      "run": "stack test --allow-different-user --ta '--pattern \"1b - bt || c3\"'",
       "setup": "",
       "input": "",
       "output": "",
@@ -82,7 +82,7 @@
     },
     {
       "name": "1c - let x = 4 in x",
-      "run": "stack test --allow-different-user --ta '--pattern \"1a - (20-c1)*(c2+c3)\"'",
+      "run": "stack test --allow-different-user --ta '--pattern \"1c - let x = 4 in x\"'",
       "setup": "",
       "input": "",
       "output": "",
@@ -91,8 +91,8 @@
       "points": 5.0
     },
     {
-      "name": "1d - (fun x->x*x) 5"
-      "run": "stack test --allow-different-user --ta '--pattern \"1a - (20-c1)*(c2+c3)\"'",
+      "name": "1d - (fun x->x*x) 5",
+      "run": "stack test --allow-different-user --ta '--pattern \"1d - (fun x->x*x) 5\"'",
       "setup": "",
       "input": "",
       "output": "",
@@ -101,8 +101,8 @@
       "points": 5.0
     },
     {
-      "name": "1e - eval recursion - ksum"
-      "run": "stack test --allow-different-user --ta '--pattern \"1a - (20-c1)*(c2+c3)\"'",
+      "name": "1e - eval recursion - ksum",
+      "run": "stack test --allow-different-user --ta '--pattern \"1e - eval recursion - ksum\"'",
       "setup": "",
       "input": "",
       "output": "",
@@ -111,8 +111,8 @@
       "points": 5.0
     },
     {
-      "name": "1f - recursion + VPrim, list length"
-      "run": "stack test --allow-different-user --ta '--pattern \"1a - (20-c1)*(c2+c3)\"'",
+      "name": "1f - recursion + VPrim, list length",
+      "run": "stack test --allow-different-user --ta '--pattern \"1f - recursion + VPrim, list length\"'",
       "setup": "",
       "input": "",
       "output": "",
@@ -121,8 +121,8 @@
       "points": 5.0
     },
     {
-      "name": "1f - VPrim 1"
-      "run": "stack test --allow-different-user --ta '--pattern \"1a - (20-c1)*(c2+c3)\"'",
+      "name": "1f - VPrim 1",
+      "run": "stack test --allow-different-user --ta '--pattern \"1f - VPrim 1\"'",
       "setup": "",
       "input": "",
       "output": "",
@@ -131,8 +131,8 @@
       "points": 5.0
     },
     {
-      "name": "1f - VPrim 2"
-      "run": "stack test --allow-different-user --ta '--pattern \"1a - (20-c1)*(c2+c3)\"'",
+      "name": "1f - VPrim 2",
+      "run": "stack test --allow-different-user --ta '--pattern \"1f - VPrim 2\"'",
       "setup": "",
       "input": "",
       "output": "",
@@ -141,8 +141,8 @@
       "points": 5.0
     },
     {
-      "name": "1e/f - sumList tail recursion"
-      "run": "stack test --allow-different-user --ta '--pattern \"1a - (20-c1)*(c2+c3)\"'",
+      "name": "1e/f - sumList tail recursion",
+      "run": "stack test --allow-different-user --ta '--pattern \"1e/f - sumList tail recursion\"'",
       "setup": "",
       "input": "",
       "output": "",
@@ -151,7 +151,7 @@
       "points": 5.0
     },
     {
-      "name": "t1.hs"
+      "name": "t1.hs",
       "run": "stack test --allow-different-user --ta '--pattern \"t1.hs\"'",
       "setup": "",
       "input": "",
@@ -161,7 +161,7 @@
       "points": 5.0
     },
     {
-      "name": "t2.hs"
+      "name": "t2.hs",
       "run": "stack test --allow-different-user --ta '--pattern \"t2.hs\"'",
       "setup": "",
       "input": "",
@@ -171,7 +171,7 @@
       "points": 5.0
     },
     {
-      "name": "t3.hs"
+      "name": "t3.hs",
       "run": "stack test --allow-different-user --ta '--pattern \"t3.hs\"'",
       "setup": "",
       "input": "",
@@ -181,7 +181,7 @@
       "points": 5.0
     },
     {
-      "name": "t4.hs"
+      "name": "t4.hs",
       "run": "stack test --allow-different-user --ta '--pattern \"t4.hs\"'",
       "setup": "",
       "input": "",
@@ -191,7 +191,7 @@
       "points": 5.0
     },
     {
-      "name": "t5.hs"
+      "name": "t5.hs",
       "run": "stack test --allow-different-user --ta '--pattern \"t5.hs\"'",
       "setup": "",
       "input": "",
@@ -201,7 +201,7 @@
       "points": 5.0
     },
     {
-      "name": "t6.hs"
+      "name": "t6.hs",
       "run": "stack test --allow-different-user --ta '--pattern \"t6.hs\"'",
       "setup": "",
       "input": "",
@@ -211,7 +211,7 @@
       "points": 5.0
     },
     {
-      "name": "t7.hs"
+      "name": "t7.hs",
       "run": "stack test --allow-different-user --ta '--pattern \"t7.hs\"'",
       "setup": "",
       "input": "",
@@ -221,7 +221,7 @@
       "points": 5.0
     },
     {
-      "name": "t8.hs"
+      "name": "t8.hs",
       "run": "stack test --allow-different-user --ta '--pattern \"t8.hs\"'",
       "setup": "",
       "input": "",
@@ -231,7 +231,7 @@
       "points": 5.0
     },
     {
-      "name": "t9.hs"
+      "name": "t9.hs",
       "run": "stack test --allow-different-user --ta '--pattern \"t9.hs\"'",
       "setup": "",
       "input": "",
@@ -241,7 +241,7 @@
       "points": 5.0
     },
     {
-      "name": "t10.hs"
+      "name": "t10.hs",
       "run": "stack test --allow-different-user --ta '--pattern \"t10.hs\"'",
       "setup": "",
       "input": "",
@@ -251,7 +251,7 @@
       "points": 5.0
     },
     {
-      "name": "t11.hs"
+      "name": "t11.hs",
       "run": "stack test --allow-different-user --ta '--pattern \"t11.hs\"'",
       "setup": "",
       "input": "",
@@ -261,7 +261,7 @@
       "points": 5.0
     },
     {
-      "name": "t12.hs"
+      "name": "t12.hs",
       "run": "stack test --allow-different-user --ta '--pattern \"t12.hs\"'",
       "setup": "",
       "input": "",
@@ -271,7 +271,7 @@
       "points": 5.0
     },
     {
-      "name": "t13.hs"
+      "name": "t13.hs",
       "run": "stack test --allow-different-user --ta '--pattern \"t13.hs\"'",
       "setup": "",
       "input": "",
@@ -281,7 +281,7 @@
       "points": 5.0
     },
     {
-      "name": "t14.hs"
+      "name": "t14.hs",
       "run": "stack test --allow-different-user --ta '--pattern \"t14.hs\"'",
       "setup": "",
       "input": "",
@@ -291,7 +291,7 @@
       "points": 5.0
     },
     {
-      "name": "t15.hs"
+      "name": "t15.hs",
       "run": "stack test --allow-different-user --ta '--pattern \"t15.hs\"'",
       "setup": "",
       "input": "",
@@ -301,7 +301,7 @@
       "points": 5.0
     },
     {
-      "name": "t16.hs"
+      "name": "t16.hs",
       "run": "stack test --allow-different-user --ta '--pattern \"t16.hs\"'",
       "setup": "",
       "input": "",
@@ -311,7 +311,7 @@
       "points": 5.0
     },
     {
-      "name": "t17.hs"
+      "name": "t17.hs",
       "run": "stack test --allow-different-user --ta '--pattern \"t17.hs\"'",
       "setup": "",
       "input": "",
