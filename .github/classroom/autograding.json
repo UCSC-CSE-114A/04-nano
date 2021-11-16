@@ -1,0 +1,324 @@
+{
+  "tests": [
+    {
+      "name": "lookup1",
+      "run": "stack test --allow-different-user --ta '--pattern \"lookup1\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5.0
+    },
+    {
+      "name": "lookup2",
+      "run": "stack test --allow-different-user --ta '--pattern \"lookup2\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5.0
+    },
+    {
+      "name": "EBin 1",
+      "run": "stack test --allow-different-user --ta '--pattern \"EBin 1\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5.0
+    },
+    {
+      "name": "EBin 2",
+      "run": "stack test --allow-different-user --ta '--pattern \"EBin 2\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5.0
+    },
+    {
+      "name": "1a - c1",
+      "run": "stack test --allow-different-user --ta '--pattern \"1a - c1\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5.0
+    },
+    {
+      "name": "1a - (20-c1)*(c2+c3)",
+      "run": "stack test --allow-different-user --ta '--pattern \"1a - (20-c1)*(c2+c3)\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5.0
+    },
+    {
+      "name": "1b - True + 3",
+      "run": "stack test --allow-different-user --ta '--pattern \"1a - (20-c1)*(c2+c3)\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5.0
+    },
+    {
+      "name": "1b - bt || c3",
+      "run": "stack test --allow-different-user --ta '--pattern \"1a - (20-c1)*(c2+c3)\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5.0
+    },
+    {
+      "name": "1c - let x = 4 in x",
+      "run": "stack test --allow-different-user --ta '--pattern \"1a - (20-c1)*(c2+c3)\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5.0
+    },
+    {
+      "name": "1d - (fun x->x*x) 5"
+      "run": "stack test --allow-different-user --ta '--pattern \"1a - (20-c1)*(c2+c3)\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5.0
+    },
+    {
+      "name": "1e - eval recursion - ksum"
+      "run": "stack test --allow-different-user --ta '--pattern \"1a - (20-c1)*(c2+c3)\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5.0
+    },
+    {
+      "name": "1f - recursion + VPrim, list length"
+      "run": "stack test --allow-different-user --ta '--pattern \"1a - (20-c1)*(c2+c3)\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5.0
+    },
+    {
+      "name": "1f - VPrim 1"
+      "run": "stack test --allow-different-user --ta '--pattern \"1a - (20-c1)*(c2+c3)\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5.0
+    },
+    {
+      "name": "1f - VPrim 2"
+      "run": "stack test --allow-different-user --ta '--pattern \"1a - (20-c1)*(c2+c3)\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5.0
+    },
+    {
+      "name": "1e/f - sumList tail recursion"
+      "run": "stack test --allow-different-user --ta '--pattern \"1a - (20-c1)*(c2+c3)\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5.0
+    },
+    {
+      "name": "t1.hs"
+      "run": "stack test --allow-different-user --ta '--pattern \"t1.hs\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5.0
+    },
+    {
+      "name": "t2.hs"
+      "run": "stack test --allow-different-user --ta '--pattern \"t2.hs\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5.0
+    },
+    {
+      "name": "t3.hs"
+      "run": "stack test --allow-different-user --ta '--pattern \"t3.hs\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5.0
+    },
+    {
+      "name": "t4.hs"
+      "run": "stack test --allow-different-user --ta '--pattern \"t4.hs\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5.0
+    },
+    {
+      "name": "t5.hs"
+      "run": "stack test --allow-different-user --ta '--pattern \"t5.hs\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5.0
+    },
+    {
+      "name": "t6.hs"
+      "run": "stack test --allow-different-user --ta '--pattern \"t6.hs\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5.0
+    },
+    {
+      "name": "t7.hs"
+      "run": "stack test --allow-different-user --ta '--pattern \"t7.hs\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5.0
+    },
+    {
+      "name": "t8.hs"
+      "run": "stack test --allow-different-user --ta '--pattern \"t8.hs\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5.0
+    },
+    {
+      "name": "t9.hs"
+      "run": "stack test --allow-different-user --ta '--pattern \"t9.hs\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5.0
+    },
+    {
+      "name": "t10.hs"
+      "run": "stack test --allow-different-user --ta '--pattern \"t10.hs\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5.0
+    },
+    {
+      "name": "t11.hs"
+      "run": "stack test --allow-different-user --ta '--pattern \"t11.hs\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5.0
+    },
+    {
+      "name": "t12.hs"
+      "run": "stack test --allow-different-user --ta '--pattern \"t12.hs\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5.0
+    },
+    {
+      "name": "t13.hs"
+      "run": "stack test --allow-different-user --ta '--pattern \"t13.hs\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5.0
+    },
+    {
+      "name": "t14.hs"
+      "run": "stack test --allow-different-user --ta '--pattern \"t14.hs\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5.0
+    },
+    {
+      "name": "t15.hs"
+      "run": "stack test --allow-different-user --ta '--pattern \"t15.hs\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5.0
+    },
+    {
+      "name": "t16.hs"
+      "run": "stack test --allow-different-user --ta '--pattern \"t16.hs\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5.0
+    },
+    {
+      "name": "t17.hs"
+      "run": "stack test --allow-different-user --ta '--pattern \"t17.hs\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5.0
+    }
+  ]
+}
