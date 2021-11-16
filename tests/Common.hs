@@ -6,6 +6,7 @@ module Common where
 import Data.IORef
 import Test.Tasty
 import Test.Tasty.HUnit
+import Test.Tasty.Runners
 import System.Exit
 import Control.Exception
 
@@ -14,10 +15,11 @@ type Score = IORef (Int, Int)
 runTests :: [Score -> TestTree] -> IO ()
 runTests groups = do
   sc <- initScore
-  defaultMain (tests sc groups) `catch` (\(e :: ExitCode) -> do
-    (n, tot) <- readIORef sc
-    putStrLn ("OVERALL SCORE = " ++ show n ++ " / "++ show tot)
-    throwIO e)
+  defaultMainWithIngredients (includingOptions coreOptions : defaultIngredients) 
+    (tests sc groups) `catch` (\(e :: ExitCode) -> do
+      (n, tot) <- readIORef sc
+      putStrLn ("OVERALL SCORE = " ++ show n ++ " / "++ show tot)
+      throwIO e)
 
 tests :: Score -> [Score -> TestTree] -> TestTree
 tests x gs = testGroup "Tests" [ g x | g <- gs ]
