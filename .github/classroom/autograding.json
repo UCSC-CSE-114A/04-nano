@@ -41,8 +41,8 @@
       "points": 5.0
     },
     {
-      "name": "1a - c1",
-      "run": "stack test --allow-different-user --ta '--pattern \"1a - c1\"'",
+      "name": "1a",
+      "run": "stack test --allow-different-user --ta '--pattern \"1a\"'",
       "setup": "",
       "input": "",
       "output": "",
@@ -51,8 +51,8 @@
       "points": 5.0
     },
     {
-      "name": "1a - (20-c1)*(c2+c3)",
-      "run": "stack test --allow-different-user --ta '--pattern \"1a - (20-c1)*(c2+c3)\"'",
+      "name": "1b",
+      "run": "stack test --allow-different-user --ta '--pattern \"1b\"'",
       "setup": "",
       "input": "",
       "output": "",
@@ -61,8 +61,8 @@
       "points": 5.0
     },
     {
-      "name": "1b - True + 3",
-      "run": "stack test --allow-different-user --ta '--pattern \"1b - True + 3\"'",
+      "name": "1c",
+      "run": "stack test --allow-different-user --ta '--pattern \"1c\"'",
       "setup": "",
       "input": "",
       "output": "",
@@ -71,8 +71,8 @@
       "points": 5.0
     },
     {
-      "name": "1b - bt || c3",
-      "run": "stack test --allow-different-user --ta '--pattern \"1b - bt || c3\"'",
+      "name": "1d",
+      "run": "stack test --allow-different-user --ta '--pattern \"1d\"'",
       "setup": "",
       "input": "",
       "output": "",
@@ -81,8 +81,8 @@
       "points": 5.0
     },
     {
-      "name": "1c - let x = 4 in x",
-      "run": "stack test --allow-different-user --ta '--pattern \"1c - let x = 4 in x\"'",
+      "name": "1e",
+      "run": "stack test --allow-different-user --ta '--pattern \"1e\"'",
       "setup": "",
       "input": "",
       "output": "",
@@ -91,8 +91,8 @@
       "points": 5.0
     },
     {
-      "name": "1d - (fun x->x*x) 5",
-      "run": "stack test --allow-different-user --ta '--pattern \"1d - (fun x->x*x) 5\"'",
+      "name": "1f",
+      "run": "stack test --allow-different-user --ta '--pattern \"1f\"'",
       "setup": "",
       "input": "",
       "output": "",
@@ -101,48 +101,8 @@
       "points": 5.0
     },
     {
-      "name": "1e - eval recursion - ksum",
-      "run": "stack test --allow-different-user --ta '--pattern \"1e - eval recursion - ksum\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 5.0
-    },
-    {
-      "name": "1f - recursion + VPrim, list length",
-      "run": "stack test --allow-different-user --ta '--pattern \"1f - recursion + VPrim, list length\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 5.0
-    },
-    {
-      "name": "1f - VPrim 1",
-      "run": "stack test --allow-different-user --ta '--pattern \"1f - VPrim 1\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 5.0
-    },
-    {
-      "name": "1f - VPrim 2",
-      "run": "stack test --allow-different-user --ta '--pattern \"1f - VPrim 2\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 5.0
-    },
-    {
-      "name": "1e/f - sumList tail recursion",
-      "run": "stack test --allow-different-user --ta '--pattern \"1e/f - sumList tail recursion\"'",
+      "name": "1e/f",
+      "run": "stack test --allow-different-user --ta '--pattern \"1e/f\"'",
       "setup": "",
       "input": "",
       "output": "",
