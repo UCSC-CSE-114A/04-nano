@@ -41,8 +41,8 @@
       "points": 5.0
     },
     {
-      "name": "1a",
-      "run": "stack test --allow-different-user --ta '--pattern \"1a\"'",
+      "name": "1a.1",
+      "run": "stack test --allow-different-user --ta '--pattern \"/1a - c1/\"'",
       "setup": "",
       "input": "",
       "output": "",
@@ -51,8 +51,28 @@
       "points": 5.0
     },
     {
-      "name": "1b",
-      "run": "stack test --allow-different-user --ta '--pattern \"1b\"'",
+      "name": "1a.2",
+      "run": "stack test --allow-different-user --ta '--pattern \"/1a - (/\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5.0
+    },
+    {
+      "name": "1b.1",
+      "run": "stack test --allow-different-user --ta '--pattern \"/1b - True/\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5.0
+    },
+    {
+      "name": "1b.2",
+      "run": "stack test --allow-different-user --ta '--pattern \"/1b - bt/\"'",
       "setup": "",
       "input": "",
       "output": "",
@@ -82,7 +102,7 @@
     },
     {
       "name": "1e",
-      "run": "stack test --allow-different-user --ta '--pattern \"1e\"'",
+      "run": "stack test --allow-different-user --ta '--pattern \"/1e - eval/\"'",
       "setup": "",
       "input": "",
       "output": "",
@@ -91,8 +111,28 @@
       "points": 5.0
     },
     {
-      "name": "1f",
-      "run": "stack test --allow-different-user --ta '--pattern \"1f\"'",
+      "name": "1f.1",
+      "run": "stack test --allow-different-user --ta '--pattern \"/1f - rec/\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5.0
+    },
+    {
+      "name": "1f.2",
+      "run": "stack test --allow-different-user --ta '--pattern \"/1f - VPrim 1/\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5.0
+    },
+    {
+      "name": "1f.3",
+      "run": "stack test --allow-different-user --ta '--pattern \"/1f - VPrim 2/\"'",
       "setup": "",
       "input": "",
       "output": "",
@@ -102,7 +142,7 @@
     },
     {
       "name": "1e/f",
-      "run": "stack test --allow-different-user --ta '--pattern \"1e/f\"'",
+      "run": "stack test --allow-different-user --ta '--pattern \"/sumList tail/\"'",
       "setup": "",
       "input": "",
       "output": "",
