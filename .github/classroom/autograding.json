@@ -68,7 +68,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 5.0
+      "points": 6.0
     },
     {
       "name": "1b.2",
@@ -78,7 +78,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 5.0
+      "points": 6.0
     },
     {
       "name": "1c",
@@ -88,7 +88,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 5.0
+      "points": 6.0
     },
     {
       "name": "1d",
@@ -98,7 +98,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 5.0
+      "points": 6.0
     },
     {
       "name": "1e",
@@ -108,7 +108,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 5.0
+      "points": 6.0
     },
     {
       "name": "1f.1",
@@ -118,7 +118,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 5.0
+      "points": 6.0
     },
     {
       "name": "1f.2",
@@ -128,7 +128,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 5.0
+      "points": 6.0
     },
     {
       "name": "1f.3",
@@ -138,7 +138,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 5.0
+      "points": 6.0
     },
     {
       "name": "1e/f",
@@ -148,7 +148,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 5.0
+      "points": 6.0
     },
     {
       "name": "t1.hs",
@@ -158,7 +158,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 5.0
+      "points": 6.0
     },
     {
       "name": "t2.hs",
@@ -168,7 +168,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 5.0
+      "points": 6.0
     },
     {
       "name": "t3.hs",
@@ -178,7 +178,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 5.0
+      "points": 6.0
     },
     {
       "name": "t4.hs",
@@ -188,7 +188,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 5.0
+      "points": 6.0
     },
     {
       "name": "t5.hs",
@@ -198,7 +198,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 5.0
+      "points": 6.0
     },
     {
       "name": "t6.hs",
@@ -208,17 +208,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 5.0
-    },
-    {
-      "name": "t7.hs",
-      "run": "stack test --allow-different-user --ta '--pattern \"t7.hs\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 5.0
+      "points": 6.0
     },
     {
       "name": "t8.hs",
@@ -228,7 +218,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 5.0
+      "points": 6.0
     },
     {
       "name": "t9.hs",
@@ -238,7 +228,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 5.0
+      "points": 6.0
     },
     {
       "name": "t10.hs",
@@ -248,7 +238,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 5.0
+      "points": 6.0
     },
     {
       "name": "t11.hs",
@@ -258,7 +248,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 5.0
+      "points": 6.0
     },
     {
       "name": "t12.hs",
@@ -268,7 +258,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 5.0
+      "points": 6.0
     },
     {
       "name": "t13.hs",
@@ -278,7 +268,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 5.0
+      "points": 6.0
     },
     {
       "name": "t14.hs",
@@ -288,7 +278,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 5.0
+      "points": 6.0
     },
     {
       "name": "t15.hs",
@@ -298,7 +288,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 5.0
+      "points": 6.0
     },
     {
       "name": "t16.hs",
@@ -308,7 +298,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 5.0
+      "points": 6.0
     },
     {
       "name": "t17.hs",
@@ -318,7 +308,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 5.0
+      "points": 6.0
     }
   ]
 }
