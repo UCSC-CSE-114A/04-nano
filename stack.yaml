@@ -1,7 +1,7 @@
 # For more information, see: http://docs.haskellstack.org/en/stable/yaml_configuration.html
 
 # Specifies the GHC version and set of packages available (e.g., lts-3.5, nightly-2015-09-21, ghc-7.10.2)
-resolver: lts-17.7
+resolver: lts-21.14
 
 # Local packages, usually specified by relative directory name
 packages:
@@ -24,6 +24,9 @@ extra-package-dbs: []
 # require-stack-version: -any # Default
 # require-stack-version: >= 1.0.0
 
+# Stack version is managed via Docker image
+recommend-stack-upgrade: false
+ 
 # Override the architecture used by stack, especially useful on Windows
 # arch: i386
 # arch: x86_64
