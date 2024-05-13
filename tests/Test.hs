@@ -63,72 +63,72 @@ unit sc = testGroup "NANO"
               , (Nano.Eq, Nano.VInt 1, Nano.VInt 1)
               , Nano.VBool True
               , 1
-              , "2a - evalOp Eq (VInt 1) (VInt 1)")
+              , "2a - evalOp Eq 1 1")
   , scoreTest ( uncurry3 Nano.evalOp
               , (Nano.Eq, Nano.VInt 1, Nano.VInt 2)
               , Nano.VBool False
               , 1
-              , "2a - evalOp Eq (VInt 1) (VInt 2)")
+              , "2a - evalOp Eq 1 2")
   , scoreTest ( uncurry3 Nano.evalOp
               , (Nano.Ne, Nano.VInt 1, Nano.VInt 1)
               , Nano.VBool False
               , 1
-              , "2a - evalOp Ne (VInt 1) (VInt 1)")
+              , "2a - evalOp Ne 1 1")
   , scoreTest ( uncurry3 Nano.evalOp
               , (Nano.Ne, Nano.VInt 1, Nano.VInt 2)
               , Nano.VBool True
               , 1
-              , "2a - evalOp Ne (VInt 1) (VInt 2)")
+              , "2a - evalOp Ne 1 2")
   , scoreTest ( uncurry3 Nano.evalOp
               , (Nano.Eq, Nano.VBool True, Nano.VBool True)
               , Nano.VBool True
               , 1
-              , "2a - evalOp Eq (VBool True) (VBool True)")
+              , "2a - evalOp Eq True True")
   , scoreTest ( uncurry3 Nano.evalOp
               , (Nano.Eq, Nano.VBool True, Nano.VInt 1)
               , Nano.VBool False
               , 1
-              , "2a - evalOp Eq (VBool True) (VInt 1)")
+              , "2a - evalOp Eq True 1")
   , scoreTest ( uncurry3 Nano.evalOp
               , (Nano.Lt, Nano.VInt 1, Nano.VInt 2)
               , Nano.VBool True
               , 1
-              , "2a - evalOp Lt (VInt 1) (VInt 2)")
+              , "2a - evalOp Lt 1 2")
   , scoreTest ( uncurry3 Nano.evalOp
               , (Nano.Lt, Nano.VInt 1, Nano.VInt 1)
               , Nano.VBool False
               , 1
-              , "2a - evalOp Lt (VInt 1) (VInt 1)")
+              , "2a - evalOp Lt 1 1")
   , scoreTest ( uncurry3 Nano.evalOp
               , (Nano.Le, Nano.VInt 2, Nano.VInt 1)
               , Nano.VBool False
               , 1
-              , "2a - evalOp Le (VInt 2) (VInt 1)")
+              , "2a - evalOp Le 2 1")
   , failTest  ( uncurry3 Nano.evalOp
               , (Nano.Le, Nano.VBool True, Nano.VBool False)
               , "type error"
               , 1
-              , "2a - evalOp Le (VBool True) (VBool False)")
+              , "2a - evalOp Le True False")
   , scoreTest ( uncurry3 Nano.evalOp
               , (Nano.And, Nano.VBool True, Nano.VBool False)
               , Nano.VBool False
               , 1
-              , "2a - evalOp And (VBool True) (VBool False)")
+              , "2a - evalOp And True False")
   , scoreTest ( uncurry3 Nano.evalOp
               , (Nano.Or, Nano.VBool True, Nano.VBool False)
               , Nano.VBool True
               , 1
-              , "2a - evalOp Or (VBool True) (VBool False)")
+              , "2a - evalOp Or True False")
   , failTest  ( uncurry3 Nano.evalOp
               , (Nano.And, Nano.VBool True, Nano.VInt 1)
               , "type error"
               , 1
-              , "2a - evalOp And (VBool True) (VInt 1)")
+              , "2a - evalOp And True 1")
   , failTest  ( uncurry3 Nano.evalOp
               , (Nano.Plus, Nano.VBool True, Nano.VInt 1)
               , "type error"
               , 1
-              , "2a - evalOp Plus (VBool True) (VInt 1)")
+              , "2a - evalOp Plus True 1")
   -- 2b
   , scoreTest ( uncurry Nano.eval
               , ([], Nano.EBool True)
