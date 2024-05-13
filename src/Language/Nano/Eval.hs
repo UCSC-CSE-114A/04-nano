@@ -2,8 +2,8 @@
 
 module Language.Nano.Eval
   ( execFile, execString, execExpr
-  , eval, lookupId, prelude
-  , parse
+  , eval, lookupId, prelude, extendEnv
+  , parse, evalOp
   , env0
   )
   where
@@ -192,6 +192,16 @@ evalOp = error "TBD:evalOp"
 lookupId :: Id -> Env -> Value
 --------------------------------------------------------------------------------
 lookupId = error "TBD:lookupId"
+
+
+--------------------------------------------------------------------------------
+-- | `extendEnv x v env` extends the environment by binding the value `v` to
+--   the variable `x`
+--------------------------------------------------------------------------------
+extendEnv :: Id -> Value -> Env -> Env
+--------------------------------------------------------------------------------
+extendEnv x v env = error "TBD:extendEnv"
+
 
 prelude :: Env
 prelude =
