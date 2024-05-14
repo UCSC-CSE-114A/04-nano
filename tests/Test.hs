@@ -169,7 +169,7 @@ unit sc = testGroup "NANO"
               , ([], (Nano.EApp (Nano.ELam "x" (Nano.EBin Nano.Plus (Nano.EVar "x") (Nano.EVar "x"))) (Nano.EInt 3)))
               , Nano.VInt 6
               , 3
-              , "3b - eval EApp (ELam \"x\" (EBin Plus (EVar \"x\") (EVar \"x\"))) (EInt 3)")
+              , "3b - eval EApp")
   , scoreTest ( Nano.eval []
               , Nano.ELet "ksum" (Nano.ELam "x" (Nano.EIf (Nano.EBin Nano.Eq (Nano.EVar "x") (Nano.EInt 0)) (Nano.EInt 0) (Nano.EBin Nano.Plus (Nano.EVar "x") (Nano.EApp (Nano.EVar "ksum") (Nano.EBin Nano.Minus (Nano.EVar "x") (Nano.EInt 1)))))) (Nano.EApp (Nano.EVar "ksum") (Nano.EInt 100))
               , Nano.VInt 5050
@@ -181,7 +181,7 @@ unit sc = testGroup "NANO"
               , (Nano.Cons, Nano.VInt 1, Nano.VInt 2)
               , Nano.VPair (Nano.VInt 1) (Nano.VInt 2)
               , 3
-              , "4a - evalOp Cons (VInt 1) (VInt 2)")
+              , "4a - evalOp Cons 1 2")
   -- ENil
   , scoreTest ( uncurry Nano.eval
               , ([], Nano.ENil)
@@ -193,7 +193,7 @@ unit sc = testGroup "NANO"
               , Nano.EApp (Nano.EVar "head") (Nano.EBin Nano.Cons (Nano.EInt 1) (Nano.EInt 2))
               , Nano.VInt 1
               , 3
-              , "4b - eval EApp head (Cons 1 2)")
+              , "4b - eval EApp head Cons")
   , failTest  ( Nano.eval Nano.prelude
               , Nano.EApp (Nano.EVar "head") Nano.ENil
               , ""
@@ -204,7 +204,7 @@ unit sc = testGroup "NANO"
               , Nano.EApp (Nano.EVar "tail") (Nano.EBin Nano.Cons (Nano.EInt 1) (Nano.EInt 2))
               , Nano.VInt 2
               , 3
-              , "4b - eval EApp tail (Cons 1 2)")
+              , "4b - eval EApp tail Cons")
   , failTest  ( Nano.eval Nano.prelude
               , Nano.EApp (Nano.EVar "tail") Nano.ENil
               , ""

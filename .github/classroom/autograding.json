@@ -291,8 +291,8 @@
       "points": 3
     },
     {
-      "name": "3b - eval EApp (ELam \"x\" (EBin Plus (EVar \"x\") (EVar \"x\"))) (EInt 3)",
-      "run": "stack test --allow-different-user --ta '--pattern \"3b - eval EApp (ELam \"x\" (EBin Plus (EVar \"x\") (EVar \"x\"))) (EInt 3)\"'",
+      "name": "3b - eval EApp",
+      "run": "stack test --allow-different-user --ta '--pattern \"3b - eval EApp\"'",
       "setup": "",
       "input": "",
       "output": "",
@@ -311,8 +311,8 @@
       "points": 6
     },
     {
-      "name": "4a - evalOp Cons (VInt 1) (VInt 2)",
-      "run": "stack test --allow-different-user --ta '--pattern \"4a - evalOp Cons (VInt 1) (VInt 2)\"'",
+      "name": "4a - evalOp Cons 1 2",
+      "run": "stack test --allow-different-user --ta '--pattern \"4a - evalOp Cons 1 2\"'",
       "setup": "",
       "input": "",
       "output": "",
@@ -331,8 +331,8 @@
       "points": 3
     },
     {
-      "name": "4b - eval EApp head (Cons 1 2)",
-      "run": "stack test --allow-different-user --ta '--pattern \"4b - eval EApp head (Cons 1 2)\"'",
+      "name": "4b - eval EApp head Cons",
+      "run": "stack test --allow-different-user --ta '--pattern \"4b - eval EApp head Cons\"'",
       "setup": "",
       "input": "",
       "output": "",
@@ -351,8 +351,8 @@
       "points": 3
     },
     {
-      "name": "4b - eval EApp tail (Cons 1 2)",
-      "run": "stack test --allow-different-user --ta '--pattern \"4b - eval EApp tail (Cons 1 2)\"'",
+      "name": "4b - eval EApp tail Cons",
+      "run": "stack test --allow-different-user --ta '--pattern \"4b - eval EApp tail Cons\"'",
       "setup": "",
       "input": "",
       "output": "",
@@ -372,7 +372,7 @@
     },
     {
       "name": "4b - recursion + VPrim, list length",
-      "run": "stack test --allow-different-user --ta '--pattern \"4b - recursion + VPrim, list length\"'",
+      "run": "stack test --allow-different-user --ta '--pattern \"4b - recursion\"'",
       "setup": "",
       "input": "",
       "output": "",
