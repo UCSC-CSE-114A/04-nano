@@ -1,10 +1,10 @@
 name:                hw4-nano
 version:             0.1.0.0
-synopsis:            Starter code for cse130 homework/04-nano
+synopsis:            Starter code for CSE114A homework/04-nano
 license:             MIT
 license-file:        LICENSE
 author:              Ranjit Jhala
-maintainer:          jhala@cs.ucsd.edu
+maintainer:          CSE114A Course Staff
 category:            Language
 build-type:          Simple
 extra-source-files:  README.md
