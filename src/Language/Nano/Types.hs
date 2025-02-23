@@ -18,7 +18,6 @@ data Binop
   = Plus
   | Minus
   | Mul
-  | Div
   | Eq
   | Ne
   | Lt
@@ -76,7 +75,6 @@ binopString :: Binop -> String
 binopString Plus  = "+"
 binopString Minus = "-"
 binopString Mul   = "*"
-binopString Div   = "/"
 binopString Eq    = "="
 binopString Ne    = "!="
 binopString Lt    = "<"
