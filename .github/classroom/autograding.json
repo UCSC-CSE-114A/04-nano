@@ -1,574 +1,596 @@
 {
-  "tests": [
-    {
-      "name": "1a - lookup1",
-      "run": "stack test --allow-different-user --ta '--pattern \"1a - lookup1\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 1
-    },
-    {
-      "name": "1a - lookup2",
-      "run": "stack test --allow-different-user --ta '--pattern \"1a - lookup2\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 1
-    },
-    {
-      "name": "1a - lookup3",
-      "run": "stack test --allow-different-user --ta '--pattern \"1a - lookup3\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 3
-    },
-    {
-      "name": "1a - extend",
-      "run": "stack test --allow-different-user --ta '--pattern \"1a - extend\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 1
-    },
-    {
-      "name": "1b - evalOp Plus",
-      "run": "stack test --allow-different-user --ta '--pattern \"1b - evalOp Plus\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 1
-    },
-    {
-      "name": "1b - evalOp Minus",
-      "run": "stack test --allow-different-user --ta '--pattern \"1b - evalOp Minus\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 1
-    },
-    {
-      "name": "1c - evalOp Mul",
-      "run": "stack test --allow-different-user --ta '--pattern \"1c - evalOp Mul\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 1
-    },
-    {
-      "name": "1d - eval EBin 1",
-      "run": "stack test --allow-different-user --ta '--pattern \"1d - eval EBin 1\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 1
-    },
-    {
-      "name": "2a - evalOp Eq 1 1",
-      "run": "stack test --allow-different-user --ta '--pattern \"2a - evalOp Eq 1 1\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 1
-    },
-    {
-      "name": "2a - evalOp Eq 1 2",
-      "run": "stack test --allow-different-user --ta '--pattern \"2a - evalOp Eq 1 2\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 1
-    },
-    {
-      "name": "2a - evalOp Ne 1 1",
-      "run": "stack test --allow-different-user --ta '--pattern \"2a - evalOp Ne 1 1\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 1
-    },
-    {
-      "name": "2a - evalOp Ne 1 2",
-      "run": "stack test --allow-different-user --ta '--pattern \"2a - evalOp Ne 1 2\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 1
-    },
-    {
-      "name": "2a - evalOp Eq True True",
-      "run": "stack test --allow-different-user --ta '--pattern \"2a - evalOp Eq True True\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 1
-    },
-    {
-      "name": "2a - evalOp Eq True 1",
-      "run": "stack test --allow-different-user --ta '--pattern \"2a - evalOp Eq True 1\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 1
-    },
-    {
-      "name": "2a - evalOp Lt 1 2",
-      "run": "stack test --allow-different-user --ta '--pattern \"2a - evalOp Lt 1 2\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 1
-    },
-    {
-      "name": "2a - evalOp Lt 1 1",
-      "run": "stack test --allow-different-user --ta '--pattern \"2a - evalOp Lt 1 1\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 1
-    },
-    {
-      "name": "2a - evalOp Le 2 1",
-      "run": "stack test --allow-different-user --ta '--pattern \"2a - evalOp Le 2 1\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 1
-    },
-    {
-      "name": "2a - evalOp Le True False",
-      "run": "stack test --allow-different-user --ta '--pattern \"2a - evalOp Le True False\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 1
-    },
-    {
-      "name": "2a - evalOp And True False",
-      "run": "stack test --allow-different-user --ta '--pattern \"2a - evalOp And True False\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 1
-    },
-    {
-      "name": "2a - evalOp Or True False",
-      "run": "stack test --allow-different-user --ta '--pattern \"2a - evalOp Or True False\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 1
-    },
-    {
-      "name": "2a - evalOp And True 1",
-      "run": "stack test --allow-different-user --ta '--pattern \"2a - evalOp And True 1\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 1
-    },
-    {
-      "name": "2a - evalOp Plus True 1",
-      "run": "stack test --allow-different-user --ta '--pattern \"2a - evalOp Plus True 1\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 1
-    },
-    {
-      "name": "2b - eval EBool True",
-      "run": "stack test --allow-different-user --ta '--pattern \"2b - eval EBool True\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 1
-    },
-    {
-      "name": "2b - eval EBool False",
-      "run": "stack test --allow-different-user --ta '--pattern \"2b - eval EBool False\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 1
-    },
-    {
-      "name": "2b - eval EIf True 2 True",
-      "run": "stack test --allow-different-user --ta '--pattern \"2b - eval EIf True 2 True\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 3
-    },
-    {
-      "name": "2b - eval EIf False 2 True",
-      "run": "stack test --allow-different-user --ta '--pattern \"2b - eval EIf False 2 True\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 3
-    },
-    {
-      "name": "2b - eval EIf 0 2 True",
-      "run": "stack test --allow-different-user --ta '--pattern \"2b - eval EIf 0 2 True\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 3
-    },
-    {
-      "name": "2b - eval EBin 2",
-      "run": "stack test --allow-different-user --ta '--pattern \"2b - eval EBin 2\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 5
-    },
-    {
-      "name": "3a - eval ELet",
-      "run": "stack test --allow-different-user --ta '--pattern \"3a - eval ELet\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 3
-    },
-    {
-      "name": "3b - eval EApp",
-      "run": "stack test --allow-different-user --ta '--pattern \"3b - eval EApp\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 3
-    },
-    {
-      "name": "3c - eval recursion - ksum",
-      "run": "stack test --allow-different-user --ta '--pattern \"3c - eval recursion - ksum\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 6
-    },
-    {
-      "name": "4a - evalOp Cons 1 2",
-      "run": "stack test --allow-different-user --ta '--pattern \"4a - evalOp Cons 1 2\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 3
-    },
-    {
-      "name": "4a - eval ENil",
-      "run": "stack test --allow-different-user --ta '--pattern \"4a - eval ENil\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 3
-    },
-    {
-      "name": "4b - eval EApp head Cons",
-      "run": "stack test --allow-different-user --ta '--pattern \"4b - eval EApp head Cons\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 3
-    },
-    {
-      "name": "4b - eval EApp head Nil",
-      "run": "stack test --allow-different-user --ta '--pattern \"4b - eval EApp head Nil\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 3
-    },
-    {
-      "name": "4b - eval EApp tail Cons",
-      "run": "stack test --allow-different-user --ta '--pattern \"4b - eval EApp tail Cons\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 3
-    },
-    {
-      "name": "4b - eval EApp tail Nil",
-      "run": "stack test --allow-different-user --ta '--pattern \"4b - eval EApp tail Nil\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 3
-    },
-    {
-      "name": "4b - recursion + VPrim, list length",
-      "run": "stack test --allow-different-user --ta '--pattern \"4b - recursion\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 6
-    },
-    {
-      "name": "4b - head of tail",
-      "run": "stack test --allow-different-user --ta '--pattern \"4b - head of tail\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 6
-    },
-    {
-      "name": "4b - head and tail",
-      "run": "stack test --allow-different-user --ta '--pattern \"4b - head and tail\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 6
-    },
-    {
-      "name": "4b - tail-recursive sum list",
-      "run": "stack test --allow-different-user --ta '--pattern \"4b - tail-recursive sum list\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 6
-    },
-    {
-      "name": "t1.hs",
-      "run": "stack test --allow-different-user --ta '--pattern \"t1.hs\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 6
-    },
-    {
-      "name": "t2.hs",
-      "run": "stack test --allow-different-user --ta '--pattern \"t2.hs\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 6
-    },
-    {
-      "name": "t3.hs",
-      "run": "stack test --allow-different-user --ta '--pattern \"t3.hs\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 6
-    },
-    {
-      "name": "t4.hs",
-      "run": "stack test --allow-different-user --ta '--pattern \"t4.hs\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 6
-    },
-    {
-      "name": "t5.hs",
-      "run": "stack test --allow-different-user --ta '--pattern \"t5.hs\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 6
-    },
-    {
-      "name": "t6.hs",
-      "run": "stack test --allow-different-user --ta '--pattern \"t6.hs\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 6
-    },
-    {
-      "name": "t8.hs",
-      "run": "stack test --allow-different-user --ta '--pattern \"t8.hs\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 6
-    },
-    {
-      "name": "t9.hs",
-      "run": "stack test --allow-different-user --ta '--pattern \"t9.hs\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 6
-    },
-    {
-      "name": "t10.hs",
-      "run": "stack test --allow-different-user --ta '--pattern \"t10.hs\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 6
-    },
-    {
-      "name": "t11.hs",
-      "run": "stack test --allow-different-user --ta '--pattern \"t11.hs\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 6
-    },
-    {
-      "name": "t12.hs",
-      "run": "stack test --allow-different-user --ta '--pattern \"t12.hs\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 6
-    },
-    {
-      "name": "t13.hs",
-      "run": "stack test --allow-different-user --ta '--pattern \"t13.hs\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 6
-    },
-    {
-      "name": "t14.hs",
-      "run": "stack test --allow-different-user --ta '--pattern \"t14.hs\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 6
-    },
-    {
-      "name": "t15.hs",
-      "run": "stack test --allow-different-user --ta '--pattern \"t15.hs\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 6
-    },
-    {
-      "name": "t16.hs",
-      "run": "stack test --allow-different-user --ta '--pattern \"t16.hs\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 6
-    },
-    {
-      "name": "t17.hs",
-      "run": "stack test --allow-different-user --ta '--pattern \"t17.hs\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 6
-    }
-  ]
+    "tests": [
+        {
+            "name": "INTEGRITY.md",
+            "run": "test -f ./INTEGRITY.md",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 0,
+            "stop-on-fail": true
+        },
+        {
+            "name": "Build Check",
+            "run": "stack build --test --no-run-tests",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 60,
+            "points": 0,
+            "stop-on-fail": true
+        },
+        {
+            "name": "1a - lookup1",
+            "run": "stack test --allow-different-user --ta '--pattern \"1a - lookup1\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "1a - lookup2",
+            "run": "stack test --allow-different-user --ta '--pattern \"1a - lookup2\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "1a - lookup3",
+            "run": "stack test --allow-different-user --ta '--pattern \"1a - lookup3\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 3
+        },
+        {
+            "name": "1a - extend",
+            "run": "stack test --allow-different-user --ta '--pattern \"1a - extend\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "1b - evalOp Plus",
+            "run": "stack test --allow-different-user --ta '--pattern \"1b - evalOp Plus\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "1b - evalOp Minus",
+            "run": "stack test --allow-different-user --ta '--pattern \"1b - evalOp Minus\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "1c - evalOp Mul",
+            "run": "stack test --allow-different-user --ta '--pattern \"1c - evalOp Mul\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "1d - eval EBin 1",
+            "run": "stack test --allow-different-user --ta '--pattern \"1d - eval EBin 1\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "2a - evalOp Eq 1 1",
+            "run": "stack test --allow-different-user --ta '--pattern \"2a - evalOp Eq 1 1\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "2a - evalOp Eq 1 2",
+            "run": "stack test --allow-different-user --ta '--pattern \"2a - evalOp Eq 1 2\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "2a - evalOp Ne 1 1",
+            "run": "stack test --allow-different-user --ta '--pattern \"2a - evalOp Ne 1 1\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "2a - evalOp Ne 1 2",
+            "run": "stack test --allow-different-user --ta '--pattern \"2a - evalOp Ne 1 2\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "2a - evalOp Eq True True",
+            "run": "stack test --allow-different-user --ta '--pattern \"2a - evalOp Eq True True\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "2a - evalOp Eq True 1",
+            "run": "stack test --allow-different-user --ta '--pattern \"2a - evalOp Eq True 1\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "2a - evalOp Lt 1 2",
+            "run": "stack test --allow-different-user --ta '--pattern \"2a - evalOp Lt 1 2\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "2a - evalOp Lt 1 1",
+            "run": "stack test --allow-different-user --ta '--pattern \"2a - evalOp Lt 1 1\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "2a - evalOp Le 2 1",
+            "run": "stack test --allow-different-user --ta '--pattern \"2a - evalOp Le 2 1\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "2a - evalOp Le True False",
+            "run": "stack test --allow-different-user --ta '--pattern \"2a - evalOp Le True False\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "2a - evalOp And True False",
+            "run": "stack test --allow-different-user --ta '--pattern \"2a - evalOp And True False\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "2a - evalOp Or True False",
+            "run": "stack test --allow-different-user --ta '--pattern \"2a - evalOp Or True False\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "2a - evalOp And True 1",
+            "run": "stack test --allow-different-user --ta '--pattern \"2a - evalOp And True 1\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "2a - evalOp Plus True 1",
+            "run": "stack test --allow-different-user --ta '--pattern \"2a - evalOp Plus True 1\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "2b - eval EBool True",
+            "run": "stack test --allow-different-user --ta '--pattern \"2b - eval EBool True\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "2b - eval EBool False",
+            "run": "stack test --allow-different-user --ta '--pattern \"2b - eval EBool False\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "2b - eval EIf True 2 True",
+            "run": "stack test --allow-different-user --ta '--pattern \"2b - eval EIf True 2 True\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 3
+        },
+        {
+            "name": "2b - eval EIf False 2 True",
+            "run": "stack test --allow-different-user --ta '--pattern \"2b - eval EIf False 2 True\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 3
+        },
+        {
+            "name": "2b - eval EIf 0 2 True",
+            "run": "stack test --allow-different-user --ta '--pattern \"2b - eval EIf 0 2 True\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 3
+        },
+        {
+            "name": "2b - eval EBin 2",
+            "run": "stack test --allow-different-user --ta '--pattern \"2b - eval EBin 2\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 5
+        },
+        {
+            "name": "3a - eval ELet",
+            "run": "stack test --allow-different-user --ta '--pattern \"3a - eval ELet\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 3
+        },
+        {
+            "name": "3b - eval EApp",
+            "run": "stack test --allow-different-user --ta '--pattern \"3b - eval EApp\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 3
+        },
+        {
+            "name": "3c - eval recursion - ksum",
+            "run": "stack test --allow-different-user --ta '--pattern \"3c - eval recursion - ksum\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 6
+        },
+        {
+            "name": "4a - evalOp Cons 1 2",
+            "run": "stack test --allow-different-user --ta '--pattern \"4a - evalOp Cons 1 2\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 3
+        },
+        {
+            "name": "4a - eval ENil",
+            "run": "stack test --allow-different-user --ta '--pattern \"4a - eval ENil\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 3
+        },
+        {
+            "name": "4b - eval EApp head Cons",
+            "run": "stack test --allow-different-user --ta '--pattern \"4b - eval EApp head Cons\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 3
+        },
+        {
+            "name": "4b - eval EApp head Nil",
+            "run": "stack test --allow-different-user --ta '--pattern \"4b - eval EApp head Nil\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 3
+        },
+        {
+            "name": "4b - eval EApp tail Cons",
+            "run": "stack test --allow-different-user --ta '--pattern \"4b - eval EApp tail Cons\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 3
+        },
+        {
+            "name": "4b - eval EApp tail Nil",
+            "run": "stack test --allow-different-user --ta '--pattern \"4b - eval EApp tail Nil\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 3
+        },
+        {
+            "name": "4b - recursion + VPrim, list length",
+            "run": "stack test --allow-different-user --ta '--pattern \"4b - recursion\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 6
+        },
+        {
+            "name": "4b - head of tail",
+            "run": "stack test --allow-different-user --ta '--pattern \"4b - head of tail\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 6
+        },
+        {
+            "name": "4b - head and tail",
+            "run": "stack test --allow-different-user --ta '--pattern \"4b - head and tail\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 6
+        },
+        {
+            "name": "4b - tail-recursive sum list",
+            "run": "stack test --allow-different-user --ta '--pattern \"4b - tail-recursive sum list\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 6
+        },
+        {
+            "name": "t1.hs",
+            "run": "stack test --allow-different-user --ta '--pattern \"t1.hs\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 6
+        },
+        {
+            "name": "t2.hs",
+            "run": "stack test --allow-different-user --ta '--pattern \"t2.hs\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 6
+        },
+        {
+            "name": "t3.hs",
+            "run": "stack test --allow-different-user --ta '--pattern \"t3.hs\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 6
+        },
+        {
+            "name": "t4.hs",
+            "run": "stack test --allow-different-user --ta '--pattern \"t4.hs\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 6
+        },
+        {
+            "name": "t5.hs",
+            "run": "stack test --allow-different-user --ta '--pattern \"t5.hs\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 6
+        },
+        {
+            "name": "t6.hs",
+            "run": "stack test --allow-different-user --ta '--pattern \"t6.hs\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 6
+        },
+        {
+            "name": "t8.hs",
+            "run": "stack test --allow-different-user --ta '--pattern \"t8.hs\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 6
+        },
+        {
+            "name": "t9.hs",
+            "run": "stack test --allow-different-user --ta '--pattern \"t9.hs\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 6
+        },
+        {
+            "name": "t10.hs",
+            "run": "stack test --allow-different-user --ta '--pattern \"t10.hs\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 6
+        },
+        {
+            "name": "t11.hs",
+            "run": "stack test --allow-different-user --ta '--pattern \"t11.hs\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 6
+        },
+        {
+            "name": "t12.hs",
+            "run": "stack test --allow-different-user --ta '--pattern \"t12.hs\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 6
+        },
+        {
+            "name": "t13.hs",
+            "run": "stack test --allow-different-user --ta '--pattern \"t13.hs\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 6
+        },
+        {
+            "name": "t14.hs",
+            "run": "stack test --allow-different-user --ta '--pattern \"t14.hs\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 6
+        },
+        {
+            "name": "t15.hs",
+            "run": "stack test --allow-different-user --ta '--pattern \"t15.hs\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 6
+        },
+        {
+            "name": "t16.hs",
+            "run": "stack test --allow-different-user --ta '--pattern \"t16.hs\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 6
+        },
+        {
+            "name": "t17.hs",
+            "run": "stack test --allow-different-user --ta '--pattern \"t17.hs\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 6
+        }
+    ]
 }
