@@ -8,8 +8,8 @@ packages:
 - '.'
 
 # Packages to be pulled from upstream that are not in the resolver (e.g., acme-missiles-0.3)
-extra-deps: 
-- clock-0.8.4 
+extra-deps:
+- clock-0.8.4
 
 # Override default flag values for local packages and extra-deps
 flags: {}
@@ -26,7 +26,7 @@ extra-package-dbs: []
 
 # Stack version is managed via Docker image
 recommend-stack-upgrade: false
- 
+
 # Override the architecture used by stack, especially useful on Windows
 # arch: i386
 # arch: x86_64
